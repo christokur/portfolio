@@ -1,0 +1,30 @@
+{
+  "career_overview": {
+    "total_experience": "15+ years",
+    "current_role": "Senior Cloud Platform Engineer",
+    "current_company": "Las Vegas Sands Corp",
+    "primary_focus": "Platform Engineering, DevOps, Cloud Architecture"
+  },
+  "companies": [
+    {
+      "company": "Las Vegas Sands Corp",
+      "duration": "Aug 2022 - Present",
+      "role": "Senior Cloud Platform Engineer",
+      "focus": "Platform transformation from 1 to 67 EKS clusters",
+      "detail_level": "comprehensive",
+      "data_location": "companies/las-vegas-sands/data/"
+    }
+  ],
+  "future_additions": {
+    "quicknode": {
+      "duration": "Mar 2022 - Jul 2022",
+      "role": "Senior DevOps Engineer",
+      "status": "planned"
+    },
+    "roadsync": {
+      "duration": "May 2020 - Mar 2022", 
+      "role": "Cloud Architect / SRE Lead",
+      "status": "planned"
+    }
+  }
+}

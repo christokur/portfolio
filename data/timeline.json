@@ -1,0 +1,89 @@
+{
+  "career_timeline": [
+    {
+      "period": "Aug 2022",
+      "event": "Joined Las Vegas Sands",
+      "state": "1 manual EKS cluster, click-ops deployments"
+    },
+    {
+      "period": "Q4 2022 - Q1 2023",
+      "event": "Infrastructure transformation begins",
+      "achievements": [
+        "First Terraform modules",
+        "GitOps proof of concept", 
+        "Python automation code embedded in infrastructure",
+        "Moving away from click-ops and monolithic approach"
+      ]
+    },
+    {
+      "period": "Q2 2023",
+      "event": "Architecture transformation and GitOps V2",
+      "achievements": [
+        "TerraGrant experimentation → TerraMate conversion (mid-2023)",
+        "GreenPrint (loosely coupled stacks) architecture design",
+        "GitOps V2 development begins (replacing old ArgoCD)",
+        "DNS delegation system",
+        "AFT and Control Tower management takeover with cleanup"
+      ]
+    },
+    {
+      "period": "Q3 2023",
+      "event": "GreenPrint system maturation",
+      "achievements": [
+        "GreenPrint (V3) infrastructure architecture fully implemented",
+        "Primary/secondary region HA/DR architecture baked into platform DNA",
+        "Blue-green EKS migrations enabled by dual-region design",
+        "EKS infrastructure refactoring completed", 
+        "Firefly drift detection tool evaluation and implementation",
+        "Embedded Python automation code maturing",
+        "Platform scaling acceleration begins"
+      ]
+    },
+    {
+      "period": "Q4 2023",
+      "event": "B2B CLI productization and team enablement",
+      "achievements": [
+        "B2B CLI extracted as standalone product (November 2023)",
+        "Fixer system built-in from day one (31 self-healing patterns)",
+        "Bricks configuration system",
+        "Team cross-training begins",
+        "Platform reliability improvements"
+      ]
+    },
+    {
+      "period": "Q1-Q2 2024", 
+      "event": "Team productivity and GitOps maturity",
+      "achievements": [
+        "Team fully cross-trained and productive",
+        "GitOps V2 reaches full maturity (mid-2024)",
+        "S3/CloudFront deployment pattern developed for lobby client (Mar-May 2024)",
+        "Multi-deployment type support added to B2B CLI",
+        "Database admin component",
+        "Deployment Info API",
+        "Massive scaling demand begins"
+      ]
+    },
+    {
+      "period": "Q3-Q4 2024",
+      "event": "Platform excellence and peak scale",
+      "achievements": [
+        "Peak cluster scale achieved (67 clusters)",
+        "Akuity enterprise ArgoCD trial and implementation (Jul-Aug 2024)",
+        "AFT TUI tool developed in Golang with Bubble Tea (Q3 2024)",
+        "Automated AFT CodePipeline triggering and monitoring",
+        "OIDC provider implementation for GitHub Actions (Q3 2024)",
+        "Static credentials replaced with temporary STS credentials", 
+        "Fine-grained per-repo AWS permissions (ECR, S3, CodeArtifact)",
+        "Compatibility matrix system", 
+        "Application manifests for promotion gates",
+        "AI integration started",
+        "IDP vision development"
+      ]
+    },
+    {
+      "period": "Present",
+      "event": "Platform excellence",
+      "state": "67 automated clusters, 100k lines of code, complete platform ecosystem"
+    }
+  ]
+}

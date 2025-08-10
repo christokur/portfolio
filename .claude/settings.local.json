@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run clean:*)",
+      "Bash(npm run sync-data:*)",
+      "Bash(npm run dev:*)",
+      "mcp__serena__replace_symbol_body",
+      "mcp__serena__insert_before_symbol"
+    ],
+    "deny": []
+  }
+}

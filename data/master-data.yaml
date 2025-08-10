@@ -1,0 +1,500 @@
+# Christo De Lange - Platform Engineering Portfolio Master Data
+# Generated: 2025-01-10
+# Purpose: Complete capture of 3+ years at Las Vegas Sands Corp
+
+metadata:
+  name: "Christo De Lange"
+  location: "Roswell, Georgia, United States"
+  linkedin: "https://www.linkedin.com/in/christo-de-lange-09134b5/"
+  github:
+    - "https://github.com/christokur"
+    - "https://github.com/dldinternet"
+  email: "linkedin.2022.2@christodelange.com"
+
+career_summary:
+  current_role: "Senior Cloud Platform Engineer"
+  company: "Las Vegas Sands Corp"
+  duration: "Aug 2022 - Present"
+  location: "Atlanta, Georgia, United States (Remote)"
+
+  elevator_pitch: |
+    As the de-facto Platform Architect at Las Vegas Sands SDS, I designed and built a comprehensive 
+    cloud platform from scratch that scaled from 1 manual EKS cluster to 67 automated clusters 
+    across 36 AWS accounts. I personally developed a 100k-line Python CLI tool with 12 supporting 
+    SDKs, invented a configuration management system using composable 'bricks,' and established 
+    GitOps practices that enabled 100+ developers to deploy applications reliably. My platform 
+    reduced environment provisioning time from weeks to hours and became the foundation for 
+    all Application environments and deployments across the project.
+
+platform_transformation:
+  before:
+    clusters: 1
+    deployment_method: "manual/click-ops"
+    environment_creation_time: "days"
+    aws_accounts: 1
+    deployment_complexity: "multi-step manual process"
+
+  after:
+    clusters: 42
+    deployment_method: "fully automated GitOps"
+    environment_creation_time: "hours"
+    aws_accounts: 30
+    deployment_complexity: "single YAML file change"
+    peak_clusters: 67
+    peak_accounts: 36
+
+  scale:
+    developers_supported: "100+"
+
+# Self-healing system section required by dataLoader
+self_healing_system:
+  name: "Fixer System"
+  total_fixers: 31
+  configuration: "YAML-based, user-customizable"
+
+technical_achievements:
+  b2b_cli:
+    description: "Comprehensive platform orchestration tool"
+    evolution: "Started as embedded Python code within infrastructure (2023), extracted as standalone product (November 2023)"
+    lines_of_code: 150000
+    language: "Python"
+    framework: "Typer"
+    testing: "pytest with decent coverage"
+    distribution: "PyPI wheel via CodeArtifact"
+    timeline:
+      embedded_phase: "Early 2023 - November 2023"
+      extraction: "November 2023"
+      multi_deployment_support: "March-May 2024 (S3/CloudFront for lobby client)"
+
+    key_features:
+      - "Environment lifecycle management"
+      - "Multi-deployment type support (K8s, S3, DNS)"
+      - "Self-healing with 31 fix patterns"
+      - "Parallel multi-account operations"
+      - "GitOps integration"
+      - "Terraform/TerraMate orchestration"
+
+    commands:
+      - "environment (create, list, destroy, snapshot)"
+      - "deployment (create, manifest, rollback)"
+      - "terraform (plan, apply, destroy)"
+      - "akuity (platform management)"
+      - "flagsmith (feature flag management)"
+      - "github (operations)"
+      - "ecr-sync (image replication)"
+      - "resource (management)"
+
+    output_formats:
+      - json
+      - yaml
+      - toml
+      - hcl
+      - styled
+      - table
+      - csv
+      - plain
+      - rich-table
+
+  sdk_ecosystem:
+    total_sdks: 12
+    maintained_by: "Christo (sole maintainer)"
+
+    sdks:
+      - name: "akuity-sdk-python"
+        version: "~1.0.0"
+        purpose: "Akuity platform API wrapper"
+
+      - name: "argocd-sdk-python"
+        version: "~2.13.4"
+        purpose: "ArgoCD automation"
+
+      - name: "flagsmith-sdk-python"
+        version: "~1.0.5"
+        purpose: "Feature flag management"
+
+      - name: "jira-sdk-python"
+        version: "~1001.0.4"
+        purpose: "Issue tracking integration"
+
+      - name: "sentry-sdk-python"
+        version: "~0.0.10"
+        purpose: "Error tracking"
+
+      - name: "python-toolbag"
+        version: "~0.26.35"
+        purpose: "Common utilities, Jinja2 wrappers, multi-format parsing"
+
+      - name: "ldx-toolbag"
+        version: ">=0.3.0,<0.4.0"
+        purpose: "Go-Python bridge for application testing"
+
+  infrastructure_architecture:
+    codename: "GreenPrint"
+    design_pattern: "Loosely Coupled Stacks with HA/DR"
+    problem_solved: "Terraform circular dependencies and teardown issues"
+    evolution:
+      v1: "Inherited monolithic click-ops system"
+      v2: "Initial Terraform refactoring (2022-early 2023)"
+      v3: "GreenPrint system - enterprise HA/DR architecture (Q3 2023)"
+
+    key_innovations:
+      - description: "Primary/secondary region HA/DR architecture baked into platform DNA"
+        benefit: "Built-in disaster recovery and high availability from day one"
+        timeline: "Q3 2023"
+
+      - description: "State data imports instead of direct references"
+        benefit: "Independent stack upgrades/teardowns"
+
+      - description: "Blue-green EKS cluster migrations enabled by dual-region design"
+        benefit: "Zero-downtime upgrades, avoiding in-place updates"
+        timeline: "Q3 2023"
+
+      - description: "Cross-account DNS delegation system"
+        benefit: "Automated subdomain management without cross-account permissions"
+
+    stack_types:
+      - route53: "DNS zones and records"
+      - route53-delegation: "Cross-account subdomain delegation"
+      - acm: "SSL certificates with DNS validation"
+      - vpc: "Network infrastructure"
+      - vpc-connections: "Peering and Transit Gateway"
+      - eks-layer1: "EKS control plane"
+      - eks-layer2: "Node groups (bootstrap and self-managed)"
+      - eks-layer3-pre: "Essential add-ons (CNI, CoreDNS, Karpenter)"
+      - eks-layer3: "Platform add-ons (monitoring, ingress)"
+      - database: "RDS instances"
+      - database-proxy: "RDS Proxy (optional)"
+      - s3-buckets: "Storage"
+      - s3-cloudfront: "CDN for static content"
+
+    environment_structure:
+      types: ["dev", "int", "test", "staging", "demo", "beta", "preprod", "prod"]
+      classes: ["services", "cloud-services/tools", "application"]
+
+  configuration_management:
+    system_name: "Bricks"
+    concept: "LEGO-like composable configuration blocks"
+    total_bricks: "100+"
+
+    features:
+      - "Recursive composition (bricks can include bricks)"
+      - "Template variables with {var.name} syntax"
+      - "Version controlled in separate repository"
+      - "Environment-specific overrides"
+      - "Conditional inclusion based on kinds"
+
+    benefits:
+      - "DRY configuration"
+      - "Environment parity"
+      - "Version compatibility tracking"
+      - "Reproducible deployments"
+
+  self_healing_system:
+    name: "Fixer System"
+    total_fixers: 31
+    configuration: "YAML-based, user-customizable"
+
+    fixer_categories:
+      resource_cleanup:
+        - "_delete_rds_old_resources"
+        - "_remove_eks_nodegroups"
+        - "_delete_security_group_dependencies"
+        - "_delete_vpc_dependencies"
+        - "_delete_waf_web_acl_dependencies"
+
+      state_management:
+        - "_rm_tf_lock_and_reinit"
+        - "_terraform_unlock_stack"
+        - "_remove_terraform_lock_files"
+
+      timing_issues:
+        - "_wait_and_retry"
+        - "_wait_a_minute_and_update_digest"
+
+      auth_refresh:
+        - "_refresh_aws_credentials"
+        - "_authenticate_to_ecr"
+        - "_k8s_re_auth"
+
+      kubernetes_specific:
+        - "_helm_uninstall_argocd"
+        - "_helm_uninstall_stuck_charts"
+        - "_delete_k8s_namespace"
+        - "_retry_k8s_helm_charts"
+
+    implementation:
+      detection: "Pattern matching on Terraform output"
+      configuration: "External YAML file with rules"
+      customization: "XDG config directory support"
+      execution: "Automated remediation with retry logic"
+
+  deployment_system:
+    gitops_workflow:
+      - step: "Developer edits deployment manifest"
+        complexity: "Single YAML file, version change only"
+
+      - step: "Git commit and push"
+        automation: "GitHub Actions trigger"
+
+      - step: "b2b deployment create runs"
+        actions: "Template expansion, brick composition"
+
+      - step: "ArgoCD manifests generated"
+        output: "Kubernetes manifests"
+
+      - step: "Push to GitOps repo"
+        result: "ArgoCD syncs automatically"
+
+      - step: "Applications deployed"
+        validation: "Smoke tests via LDX toolbag"
+
+    deployment_types:
+      - kubernetes: "Helm charts and Kustomize"
+      - s3: "Static content deployment"
+      - dns: "Route53 record management"
+      - cloudfront: "CDN updates"
+
+  advanced_components:
+    database_admin:
+      description: "Automated database provisioning system"
+      workflow:
+        - "RDS creates master database with admin credentials"
+        - "Credentials stored in AWS Secrets Manager"
+        - "Database admin pod reads credentials via ESO"
+        - "Creates application databases per configuration"
+        - "Generates user credentials"
+        - "Stores in K8s secrets by convention"
+      benefit: "Zero-touch database setup for developers"
+
+    deployment_info_api:
+      description: "Runtime visibility into deployed versions"
+      features:
+        - "JSON endpoint per environment"
+        - "Real-time version information"
+        - "Complete deployment manifest"
+      use_cases:
+        - "Rollout verification"
+        - "Debugging"
+        - "Audit trail"
+
+    secret_management:
+      chain: "1Password → AWS Secrets Manager → ESO → K8s Secrets"
+      features:
+        - "1Password Connect servers per environment"
+        - "External Secrets Operator (ESO) sync"
+        - "Namespace-scoped secrets"
+        - "Convention-based placement"
+
+  platform_philosophy:
+    four_pillars:
+      - name: "Configuration"
+        examples: ["Deployment manifests", "Environment configs", "Bricks"]
+
+      - name: "Infrastructure"
+        examples: ["Terraform", "Kubernetes", "AWS resources"]
+
+      - name: "Code"
+        examples: ["Applications", "Services", "Containers"]
+
+      - name: "Data"
+        examples: ["Databases", "Migrations", "State management"]
+
+    principles:
+      - "All pillars are first-class citizens"
+      - "Everything is versioned and released"
+      - "Compatibility must be enforced"
+      - "Lower environments allow experimentation"
+      - "Higher environments require blessed combinations"
+
+  compatibility_system:
+    application_manifests:
+      purpose: "Capture blessed version combinations"
+      workflow:
+        - "b2b environment snapshot captures working state"
+        - "Manifest created with all versions pinned"
+        - "Published as versioned artifact"
+        - "Higher environments can only deploy manifests"
+      benefit: "Prevents untested combinations in production"
+
+    compatibility_matrix:
+      purpose: "Knowledge base of what works together"
+      features:
+        - "Temporal version ranges (date-based)"
+        - "Multi-level dependency management"
+        - "Lifecycle stages (alpha, beta, prod)"
+        - "Environment restrictions"
+        - "Group inheritance"
+      implementation: "YAML with JSONSchema validation"
+
+  security_improvements:
+    oidc_implementation:
+      timeline: "Q3 2024"
+      description: "GitHub Actions OIDC provider implementation"
+      problem_solved: "Static AWS credentials in GitHub org secrets"
+      solution:
+        - "OIDC provider configured in AWS master account"
+        - "Per-repository temporary STS credentials"
+        - "Fine-grained IAM permissions per repo"
+      benefits:
+        - "Eliminated credential rotation burden"
+        - "Prevented credential leakage risk"
+        - "Granular access control (ECR read/write, S3, CodeArtifact)"
+        - "Per-repository security boundaries"
+        - "Temporary credentials vs static secrets"
+
+  automation_tools:
+    aft_tui_tool:
+      description: "Golang TUI application for AFT pipeline management"
+      language: "Go"
+      framework: "Bubble Tea"
+      timeline: "Q3 2024"
+      problem_solved: "Manual AFT CodePipeline triggering for account customizations"
+      solution: "TUI interface for automated pipeline triggering and monitoring"
+      benefits:
+        - "Eliminated manual click-ops in AFT account"
+        - "Real-time pipeline monitoring"
+        - "Streamlined AWS account customization workflow"
+
+  innovation_initiatives:
+    ai_integration:
+      - tool: "Holmes GPT"
+        purpose: "K8s health troubleshooting with AI"
+
+      - tool: "AWS Bedrock"
+        purpose: "Claude and other model integration"
+
+      - tool: "Pocketflow"
+        purpose: "Automated code documentation with diagrams"
+
+    tool_evaluations:
+      - name: "Firefly"
+        status: "Implemented"
+        purpose: "Drift detection"
+        timeline: "Q2-Q3 2023"
+
+      - name: "Akuity"
+        status: "Implemented"
+        purpose: "Enterprise ArgoCD"
+        timeline: "Trial Jul-Aug 2024, implemented through end of 2024"
+
+      - name: "Kargo"
+        status: "MVP completed"
+        purpose: "Progressive delivery"
+        timeline: "Procured Q1 2025, approved Q2 2025"
+
+      - name: "Keycloak"
+        status: "In progress"
+        purpose: "SSO for all tools"
+
+      - name: "AWS Controllers for K8s (ACK)"
+        status: "POC completed"
+        purpose: "Cloud-native AWS resource management"
+
+    future_vision:
+      internal_developer_platform:
+        - "API version of b2b-cli"
+        - "Web UI for self-service"
+        - "GitOps environment creation"
+        - "Batch job processing"
+        - "Complete self-service platform"
+
+  metrics_and_impact:
+    scale:
+      clusters: "1 → 67"
+      aws_accounts: "1 → 36"
+      developers_supported: "100+"
+      deployments_per_month: "Hundreds"
+
+    efficiency:
+      environment_creation: "Weeks → Hours"
+      deployment_process: "Multi-step → Single YAML edit"
+      platform_engineer_productivity: "1 environment/day capability"
+
+    reliability:
+      self_healing_patterns: 31
+      automation_success_rate: "Dramatically improved"
+      incident_reduction: "Significant"
+
+    cost_optimization:
+      initiatives:
+        - "Services cluster separation"
+        - "Namespace multi-tenancy"
+        - "Spot instance evaluation"
+        - "Environment consolidation"
+
+  team_context:
+    platform_team_size: 5
+    actual_contributors: 2
+    primary_architect: "Christo"
+    role_in_practice: "Sole Platform Architect and Primary Developer"
+
+  technical_challenges_solved:
+    - challenge: "Terraform circular dependencies"
+      solution: "Loosely coupled stacks with state imports"
+
+    - challenge: "Stateful services preventing scale-down"
+      solution: "Blue-green cluster migrations, disabled Karpenter scale-in"
+
+    - challenge: "Cross-account DNS management"
+      solution: "Automated delegation system with branch-per-account"
+
+    - challenge: "Terraform provider reliability issues"
+      solution: "31 pattern-based fixers with retry logic"
+
+    - challenge: "Environment configuration drift"
+      solution: "Bricks system with version control"
+
+    - challenge: "Untested combinations in production"
+      solution: "Application manifests with promotion gates"
+
+  documentation_and_tooling:
+    documentation_system:
+      - "Automated docs generation with Portray/pdocs"
+      - "Published to GitHub Pages"
+      - "Cruft system for repo standardization"
+      - "Cookie-cutter templates"
+
+    ci_cd_standardization:
+      - "GitHub Actions workflows"
+      - "Self-hosted runners in K8s"
+      - "Standardized across all repos via Cruft"
+
+  key_decisions:
+    successful:
+      - "Loosely coupled Terraform stacks"
+      - "Bricks composition system"
+      - "Blue-green EKS migrations"
+      - "GitOps everything"
+      - "Pattern-based self-healing"
+
+    lessons_learned:
+      - "EKS Blueprints (stuck on v4, too rigid)"
+      - "Terraform direct references (circular dependencies)"
+      - "Spot instances (incompatible with stateful services)"
+
+previous_experience:
+  quicknode:
+    title: "Senior DevOps Engineer"
+    duration: "Mar 2022 - Jul 2022"
+    key_achievements:
+      - "Automated Blockchain node deployment"
+      - "Terraform and Ansible patterns"
+      - "Go programming for new blockchains"
+
+  roadsync:
+    title: "Cloud Architect / SRE Lead"
+    duration: "May 2020 - Mar 2022"
+    key_achievements:
+      - "60+ project CI/CD automation"
+      - "API-first serverless architecture"
+      - "Turnkey path to production"
+
+  earlier_roles:
+    - company: "TekStream Solutions"
+      title: "Cloud Architect"
+
+    - company: "Infor"
+      title: "Site Reliability Architect"
+
+    - company: "The Home Depot"
+      title: "Senior Site Reliability Engineer"
