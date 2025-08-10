@@ -138,11 +138,25 @@ npm run deploy
 - Social media links
 - Portfolio repository
 
+### 6. Content
+#### Case Studies
+- [Platform Transformation: Scaling from 1 to 67 EKS Clusters](./las-vegas-sands/case-studies/01-platform-transformation.md)
+- [Self-Healing Infrastructure at Scale: 31 Patterns for Automated Recovery](./las-vegas-sands/case-studies/02-self-correcting-infrastructure-code.md)
+- [The Compatibility Matrix: Solving Dependency Hell at Scale](./las-vegas-sands/case-studies/03-compatibility-matrix.md)
+- [Blue-Green EKS Migrations: Zero-Downtime Cluster Updates at Scale](./las-vegas-sands/case-studies/04-blue-green.md)
+
+#### Technical Blogs
+- [The Four Pillars of Platform Engineering: A Unified Theory of Infrastructure](./las-vegas-sands/technical-blogs/01-cicd.md)
+- [Solving Terraform at Scale: From Chaos to Control Across 67 Clusters](./las-vegas-sands/technical-blogs/02-terraform.md)
+- [Bricks: Building Composable Configuration Management at Scale](./las-vegas-sands/technical-blogs/03-bricks.md)
+- [AI-Powered Platform Engineering: From Troubleshooting to Documentation](./las-vegas-sands/technical-blogs/04-ai-pe.md)
+
 ## 📧 Contact
 
 - **Email**: portfolio@christodelange.com
 - **LinkedIn**: [christo-de-lange-09134b5](https://www.linkedin.com/in/christo-de-lange-09134b5/)
 - **GitHub**: [christokur](https://github.com/christokur)
+- **Portfolio**: [christokur](https://christokur.github.io/portfolio/)
 
 ## 📄 License
 
