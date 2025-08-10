@@ -30,7 +30,7 @@ platform_transformation:
   before:
     clusters: 1
     deployment_method: "manual/click-ops"
-    environment_creation_time: "days"
+    environment_creation_time: "weeks"
     aws_accounts: 1
     deployment_complexity: "multi-step manual process"
 

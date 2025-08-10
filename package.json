@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "sync-data": "node scripts/sync-data.js",
-    "deploy": "npm run sync-data && npm run build",
+    "deploy": "npm run build",
     "clean": "rm -rf node_modules package-lock.json dist build || true && npm install"
   },
   "keywords": [

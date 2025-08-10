@@ -43,29 +43,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-#      - name: Sync data from experience repo
-#        run: |
-#          # Copy data files from experience repo
-#          mkdir -p data
-#          cp ./experience-data/companies/las-vegas-sands/data/master-data.yaml ./data/
-#          cp ./experience-data/companies/las-vegas-sands/data/timeline.json ./data/
-#          cp ./experience-data/data/career-timeline.json ./data/
-#          echo "✅ Data synchronized successfully"
-#          ls -la data/
-
-      - name: Build Remotion project
-        run: |
-          # Create output directory
-          mkdir -p dist
-          
-          # Render the video as MP4 for video version
-          npx remotion render Main dist/portfolio-video.mp4
-          
-          # Render static HTML version for web deployment  
-          npx remotion render Main dist/index.html --sequence
-          
-          echo "✅ Build completed successfully"
-          ls -la dist/
+      - name: Sync and Build
+        run: npm run deploy
+#        env:
+#          EXPERIENCE_REPO_PATH: ./experience-data
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
