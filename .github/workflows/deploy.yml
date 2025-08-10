@@ -22,37 +22,37 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Checkout experience repo for data
-        uses: actions/checkout@v4
-        with:
-          repository: christokur/experience
-          path: ./experience-data
-          token: ${{ secrets.GITHUB_TOKEN }}
-          
+
+#      - name: Checkout experience repo for data
+#        uses: actions/checkout@v4
+#        with:
+#          repository: christokur/experience
+#          path: ./experience-data
+#          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
-      - name: Sync data from experience repo
-        run: |
-          # Copy data files from experience repo
-          mkdir -p data
-          cp ./experience-data/companies/las-vegas-sands/data/master-data.yaml ./data/
-          cp ./experience-data/companies/las-vegas-sands/data/timeline.json ./data/
-          cp ./experience-data/data/career-timeline.json ./data/
-          echo "✅ Data synchronized successfully"
-          ls -la data/
-          
+
+#      - name: Sync data from experience repo
+#        run: |
+#          # Copy data files from experience repo
+#          mkdir -p data
+#          cp ./experience-data/companies/las-vegas-sands/data/master-data.yaml ./data/
+#          cp ./experience-data/companies/las-vegas-sands/data/timeline.json ./data/
+#          cp ./experience-data/data/career-timeline.json ./data/
+#          echo "✅ Data synchronized successfully"
+#          ls -la data/
+
       - name: Build Remotion project
         run: |
           # Create output directory
@@ -66,10 +66,10 @@ jobs:
           
           echo "✅ Build completed successfully"
           ls -la dist/
-          
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
